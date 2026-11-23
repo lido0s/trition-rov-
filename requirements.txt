@@ -1,0 +1,4 @@
+pygame>=2.5
+pynput>=1.7
+pytest>=7
+ruff>=0.4

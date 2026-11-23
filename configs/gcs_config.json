@@ -1,0 +1,24 @@
+{
+  "logging": {"level": "INFO", "file": "logs/gcs.log", "max_bytes": 1000000, "backup_count": 3},
+  "input": {"sample_rate_hz": 50, "config_poll_seconds": 1.0},
+  "default_profile": "default",
+  "profiles": {
+    "default": {
+      "controller_name": null,
+      "axes": {
+        "0": {"command": "sway", "deadzone": 0.10, "invert": false},
+        "1": {"command": "surge", "deadzone": 0.10, "invert": true},
+        "2": {"command": "yaw", "deadzone": 0.10, "invert": false},
+        "3": {"command": "heave", "deadzone": 0.10, "invert": true}
+      },
+      "buttons": {"0": "lights_toggle", "1": "gripper_toggle"},
+      "hats": {"0": {"up": "camera_up", "down": "camera_down"}},
+      "keys": {
+        "w": ["surge", 1.0], "s": ["surge", -1.0],
+        "d": ["sway", 1.0], "a": ["sway", -1.0],
+        "e": ["heave", 1.0], "q": ["heave", -1.0],
+        "left": ["yaw", -1.0], "right": ["yaw", 1.0]
+      }
+    }
+  }
+}
